@@ -1,4 +1,4 @@
-# Cross-Site Scripting (XSS) in Reddit Comments API
+# Cross-Site Scripting (XSS) in Reddit Comments
 
 ## Summary
 
