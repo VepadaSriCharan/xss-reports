@@ -8,7 +8,7 @@ The application reflects user-supplied input inside a JavaScript context without
 
 An attacker can craft a malicious URL and trick a victim into opening it. Once visited, the injected JavaScript executes in the context of the vulnerable application.
 
----
+
 
 ## Vulnerability Type
 
@@ -16,7 +16,7 @@ An attacker can craft a malicious URL and trick a victim into opening it. Once v
 
 **Context:** JavaScript Context
 
----
+
 
 ## Method
 
@@ -24,7 +24,7 @@ An attacker can craft a malicious URL and trick a victim into opening it. Once v
 GET
 ```
 
----
+
 
 ## Vulnerable Parameter
 
@@ -32,7 +32,7 @@ GET
 search
 ```
 
----
+
 
 ## Vulnerable URL
 
@@ -40,7 +40,7 @@ search
 https://kzlabs.in/55.php?search=MIkey%27">-</script><img+src=x+onerror=alert(1)>
 ```
 
----
+
 
 ## Steps to Reproduce
 
@@ -64,7 +64,7 @@ https://kzlabs.in/55.php?search=MIkey%27">-</script><img+src=x+onerror=alert(1)>
 
 6. The browser executes the JavaScript and displays an `alert(1)` popup.
 
----
+
 
 ## Payload Used
 
@@ -72,7 +72,7 @@ https://kzlabs.in/55.php?search=MIkey%27">-</script><img+src=x+onerror=alert(1)>
 "></script><img src=x onerror=alert(1)>
 ```
 
----
+
 
 ## Proof of Concept
 
@@ -86,7 +86,7 @@ alert(1)
 
 This confirms that arbitrary JavaScript execution is possible.
 
----
+
 
 <img width="1913" height="1025" alt="image" src="https://github.com/user-attachments/assets/d3107666-141b-4ae3-897f-c6f99496f293" />
 
@@ -104,7 +104,7 @@ Potential impacts include:
 - Performing actions on behalf of authenticated users.
 - Stealing sensitive information accessible to the current user.
 
----
+
 
 ## Recommendation
 
