@@ -14,16 +14,6 @@ An attacker can craft a malicious URL and trick a victim into opening it. Once v
 
 **Reflected Cross-Site Scripting (Reflected XSS)**
 
-**Context:** JavaScript Context
-
-
-
-## Method
-
-```text
-GET
-```
-
 
 
 ## Vulnerable Parameter
