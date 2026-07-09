@@ -54,6 +54,10 @@ The callback confirmed successful execution in the administrator's browser and i
 
 A recorded demonstration and the callback details from the XSS monitoring service confirm successful exploitation of the Blind XSS vulnerability.
 
+
+https://github.com/user-attachments/assets/bb5508c0-ad1c-4336-97fb-75dec8e8f31f
+
+
 ## Impact
 
 An attacker can store a malicious payload that executes when an administrator or another privileged user views the affected page. This could allow an attacker to execute arbitrary JavaScript in the administrator's browser, access sensitive information available to the administrator's session, or perform actions on behalf of the administrator.
