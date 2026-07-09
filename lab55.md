@@ -83,25 +83,13 @@ This confirms that arbitrary JavaScript execution is possible.
 
 ## Impact
 
-An attacker could exploit this vulnerability by sending a crafted link to a victim. If the victim opens the link, arbitrary JavaScript executes in the context of the vulnerable website.
-
-Potential impacts include:
-
-- Execution of arbitrary JavaScript.
-- Modification of page content.
-- Credential theft through phishing pages.
-- Session hijacking (where applicable).
-- Performing actions on behalf of authenticated users.
-- Stealing sensitive information accessible to the current user.
-
-
+An attacker can craft a malicious link that, when opened by a victim, executes arbitrary JavaScript in the context of the vulnerable website. This could allow an attacker to manipulate page content, steal sensitive user information, or perform actions on behalf of an authenticated user.
 
 ## Recommendation
 
 To mitigate this vulnerability:
 
-- Properly encode user input before inserting it into JavaScript contexts.
-- Escape special characters that can terminate JavaScript strings or HTML elements.
-- Perform strict input validation where appropriate.
-- Use contextual output encoding based on where the data is rendered.
-- Deploy a strong Content Security Policy (CSP) to reduce the impact of Cross-Site Scripting vulnerabilities.
+- Use htmlspecialchars() (or an equivalent output-encoding function) before rendering user-controlled data in HTML.
+- Filter or sanitize HTML tags to prevent malicious markup from being injected.
+- Filter or restrict dangerous JavaScript methods such as alert(), confirm(), and prompt() where appropriate.
+- Deploy a Web Application Firewall (WAF), such as Cloudflare WAF, to help detect and block malicious XSS payloads.
