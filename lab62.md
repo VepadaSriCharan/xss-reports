@@ -58,6 +58,9 @@ This confirms that arbitrary JavaScript is permanently stored and executed whene
 
 <img width="1484" height="852" alt="image" src="https://github.com/user-attachments/assets/ef340473-2b8d-4410-90f3-b0e7f9f55ae6" />
 
+<img width="1920" height="747" alt="image" src="https://github.com/user-attachments/assets/475cd9df-2e47-45ba-b43a-6323b2fdb150" />
+
+
 ## Impact
 
 An attacker can store a malicious payload that executes whenever another user visits the affected page. If an administrator or another privileged user views the stored signature, the injected JavaScript executes in their browser. This could allow an attacker to manipulate page content, steal sensitive information, or perform actions on behalf of the affected user.
